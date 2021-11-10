@@ -1,6 +1,8 @@
 package programming.lab1;
 
-public abstract class Food implements Consumable{
+import org.w3c.dom.ls.LSOutput;
+
+public  class Food implements Consumable{
     private String name;
 
     public String getName(){
@@ -19,10 +21,14 @@ public abstract class Food implements Consumable{
         if(!(obj instanceof Food)){
             return false;
         }
-        else if (name == null || ((Food)obj).name == null){  // РёРјСЏ РЅРµ Р·Р°РґР°РЅРѕ
+        else if (name == null || ((Food)obj).name == null){
             return false;
         }
         return name.equals(((Food)obj).name);
     }
+    public void consume(){
+        System.out.println("Съедено");
+    }
 }
+
 

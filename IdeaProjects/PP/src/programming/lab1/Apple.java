@@ -1,6 +1,6 @@
 package programming.lab1;
 
-public class Apple extends Food{
+public class Apple extends Food {
     private String size;
 
     public Apple(String size) {

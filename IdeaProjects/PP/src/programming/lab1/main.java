@@ -1,8 +1,5 @@
 package programming.lab1;
-import programming.lab1.Apple;
-import programming.lab1.Cheese;
-import programming.lab1.Food;
-import programming.lab1.Pie;
+
 
 import java.util.Scanner;
 class Main {
@@ -24,11 +21,6 @@ class Main {
             } else if (food.equals("Пирог/Вишнёвый")) {
                 breakfast[i] = new Pie("Вишнёвый");
             }  else break;
-        }
-        for (int j=0; j<breakfast.length; j++) {
-            if (breakfast[j] != null)
-                breakfast[j].consume();
-            else break;
         }
 
         int apple_counter=0;
