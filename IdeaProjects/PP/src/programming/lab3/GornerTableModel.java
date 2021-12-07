@@ -47,7 +47,12 @@ public class GornerTableModel extends AbstractTableModel {
                 return result;
             }
             case 2:{
-                return result > 0;
+                double t = result *100;
+                if ((int)t % 2 != 0){
+                    return result > 0 ;
+                } else{
+                    return result < 0;
+                }
             }
             case 3:{
                 if ((int)result % 2 != 0){
@@ -69,7 +74,7 @@ public class GornerTableModel extends AbstractTableModel {
             case 0:
                 return "Значение X";
             case 2:
-                return "Значение больше 0?";
+                return "Дробная часть нечѐтная?";
             default:
                 return "Значение многочлена";
         }

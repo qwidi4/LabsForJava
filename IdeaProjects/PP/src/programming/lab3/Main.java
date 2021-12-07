@@ -54,7 +54,7 @@ public class Main extends JFrame {
         Action aboutProgramAction = new AbstractAction("О программе") {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(Main.this, "Андреева Евгения\n10 группа", "О программе", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(Main.this, "Мартинович Никита\n10 группа", "О программе", JOptionPane.INFORMATION_MESSAGE);
             }
         };
         JMenuItem aboutProgramItem = spravkaMenu.add(aboutProgramAction);
