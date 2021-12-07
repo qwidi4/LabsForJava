@@ -90,7 +90,7 @@ public class Main extends JFrame {
         saveToGraphicsMenuItem = fileMenu.add(saveToGraphicsAction);
 
         saveToGraphicsMenuItem.setEnabled(false);
-        Action searchValueAction = new AbstractAction("Найти значение многочлена") {
+        Action searchValueAction = new AbstractAction("Найти значение многочлена и x") {
 
             public void actionPerformed(ActionEvent event) {
                 String value = JOptionPane.showInputDialog(Main.this, "Введите значение для поиска",
@@ -100,7 +100,6 @@ public class Main extends JFrame {
                 getContentPane().repaint();
             }
         };
-
 
         searchValueMenuItem = tableMenu.add(searchValueAction);
         searchValueMenuItem.setEnabled(false);
@@ -113,6 +112,7 @@ public class Main extends JFrame {
         JLabel labelForStep = new JLabel("с шагом:");
         textFieldStep = new JTextField("0.1", 10);
         textFieldStep.setMaximumSize(textFieldStep.getPreferredSize());
+
 
         Box hboxRange = Box.createHorizontalBox();
         hboxRange.setBorder(BorderFactory.createBevelBorder(1));
@@ -128,10 +128,11 @@ public class Main extends JFrame {
         hboxRange.add(Box.createHorizontalStrut(10));
         hboxRange.add(textFieldStep);
         hboxRange.add(Box.createHorizontalGlue());
+
         hboxRange.setPreferredSize(new Dimension(
                 new Double(hboxRange.getMaximumSize().getWidth()).intValue(),
                 new Double(hboxRange.getMinimumSize().getHeight()).intValue()*2));
-        getContentPane().add(hboxRange, BorderLayout.NORTH);
+        getContentPane().add(hboxRange, BorderLayout.SOUTH);
 
         JButton buttonCalc = new JButton("Вычислить");
         buttonCalc.addActionListener(new ActionListener() {
@@ -188,7 +189,7 @@ public class Main extends JFrame {
                 Double(hboxButtons.getMaximumSize().getWidth()).intValue(), new
                 Double(hboxButtons.getMinimumSize().getHeight()).intValue()*2));
 
-        getContentPane().add(hboxButtons, BorderLayout.SOUTH);
+        getContentPane().add(hboxButtons, BorderLayout.NORTH);
 
         hBoxResult = Box.createHorizontalBox();
         hBoxResult.add(new JPanel());

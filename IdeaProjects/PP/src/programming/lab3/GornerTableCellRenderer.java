@@ -11,7 +11,6 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.table.TableCellRenderer;
 
-
 public class GornerTableCellRenderer implements TableCellRenderer {
     private JPanel panel = new JPanel();
     private JLabel label = new JLabel();
@@ -47,13 +46,15 @@ public class GornerTableCellRenderer implements TableCellRenderer {
 
 // Установить текст надписи равным строковому представлению числа
 
-        if (col==1 && needle!=null && needle.equals(formattedDouble)) {
+        if (col <= 1 && needle!=null && needle.equals(formattedDouble)) {
 // Номер столбца = 1 (т.е. второй столбец) + иголка не null // (значит что-то ищем) +
 // значение иголки совпадает со значением ячейки таблицы - // окрасить задний фон панели в красный цвет
             panel.setBackground(Color.PINK);
-        } else if(col == 0) {
+
+        } else {
             panel.setBackground(Color.WHITE);
         }
+
         return panel;
     }
     public void setNeedle(String needle) {
