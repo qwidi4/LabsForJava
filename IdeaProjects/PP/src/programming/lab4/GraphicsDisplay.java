@@ -455,7 +455,7 @@ minY
 
             Rectangle2D centerBounds = axisFont.getStringBounds("0", context);
             Point2D.Double centerLabelPos = xyToPoint(0, 0);
-            canvas.drawString("0", (float)centerLabelPos.getX() + 10,
+            canvas.drawString("0", (float)centerLabelPos.getX() - 20,
                     (float)(centerLabelPos.getY() - centerBounds.getY()));
         }
 // Определить, должна ли быть видна ось X на графике

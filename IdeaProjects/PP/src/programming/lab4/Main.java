@@ -145,7 +145,7 @@ public class Main extends JFrame {
     }
 
     public static void main(String[] args) {
-// Создать и показать экземпляр главного окна приложени
+// Создать и показать экземпляр главного окна приложении
         Main frame = new Main();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
